@@ -85,29 +85,7 @@ class VerticalFlip(Operation):
         return image_array[::-1, :]
 
 
-class OperationPipeline:
-    operations = []
 
-    def blur(self, probability: float):
-        self.__add_operation(Blur(probability))
-
-    def rotate(self, probability: float, max_left_degree: int, max_right_degree: int):
-        self.__add_operation(Rotate(probability, max_left_degree, max_right_degree))
-
-    def random_noise(self, probability: float):
-        self.__add_operation(RandomNoise(probability))
-
-    def resize(self, probability: float, width: int, height: int):
-        self.__add_operation(Resize(probability, width, height))
-
-    def horizontal_flip(self, probability: float):
-        self.__add_operation(HorizontalFlip(probability))
-
-    def vertical_flip(self, probability: float):
-        self.__add_operation(VerticalFlip(probability))
-
-    def __add_operation(self, operation: Operation):
-        self.operations.append(operation)
         
 ## the code is mostly taken from autoaugment pytorch repo:
 # https://github.com/DeepVoltaire/AutoAugment
@@ -598,3 +576,37 @@ class RandAugment:
 
     def __repr__(self):
         return "Random Augment Policy"
+    
+    
+    class OperationPipeline:
+    operations = []
+
+    def blur(self, probability: float):
+        self.__add_operation(Blur(probability))
+
+    def rotate(self, probability: float, max_left_degree: int, max_right_degree: int):
+        self.__add_operation(Rotate(probability, max_left_degree, max_right_degree))
+
+    def random_noise(self, probability: float):
+        self.__add_operation(RandomNoise(probability))
+
+    def resize(self, probability: float, width: int, height: int):
+        self.__add_operation(Resize(probability, width, height))
+
+    def horizontal_flip(self, probability: float):
+        self.__add_operation(HorizontalFlip(probability))
+
+    def vertical_flip(self, probability: float):
+        self.__add_operation(VerticalFlip(probability))
+    
+    def cutout(self, size: float):
+        self.__add__operation(Cutout(size))
+        
+    def imagenetpolicy(self, fillcolor: (float, float, float):
+        self.__add_operation(ImageNetPolicy(fillcolor))
+                       
+    def randaugment(self, trans_list: []):
+        self.__add_operation(RandAugment(trans_list))
+
+    def __add_operation(self, operation: Operation):
+        self.operations.append(operation)
