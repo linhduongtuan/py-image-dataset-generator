@@ -5,6 +5,8 @@ DEFAULT_OPERATIONS = [
     'horizontal_flip',
     'vertical_flip',
     'cutout',
+    'imagenetpolicy',
+    'randaugment'
 ]
 
 # Rotation configuration
