@@ -602,7 +602,7 @@ class RandAugment:
         def cutout(self, size: float):
             self.__add__operation(Cutout(size))
         
-        def imagenetpolicy(self, fillcolor: (float, float, float):
+        def imagenetpolicy(self, fillcolor: float):
             self.__add_operation(ImageNetPolicy(fillcolor))
                        
         def randaugment(self, trans_list: list):
