@@ -61,12 +61,12 @@ if __name__ == '__main__':
     if 'vertical_flip' in DEFAULT_OPERATIONS:
         generator.vertical_flip(probability=DEFAULT_VERTICAL_FLIP_PROBABILITY)
     
-    if 'cutout' in DEFAULT_OPERATIONS:
-        generator.cutout(size=DEFAULT_CUTOUT_SIZE)
+   # if 'cutout' in DEFAULT_OPERATIONS:
+   #     generator.cutout(size=DEFAULT_CUTOUT_SIZE)
         
         
-    if 'imagnetpolicy' in DEFAULT_OPERATIONS:
-        generator.imagenetpolicy(fillcolor=DEFAULT_IMAGENETPOLYCY_FILLCOLOR)
+   # if 'imagnetpolicy' in DEFAULT_OPERATIONS:
+   #     generator.imagenetpolicy(fillcolor=DEFAULT_IMAGENETPOLYCY_FILLCOLOR)
         
    
     #if 'randaugment' in DEFAULT_OPERATIONS:
