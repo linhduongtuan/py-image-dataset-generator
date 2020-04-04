@@ -605,7 +605,7 @@ class RandAugment:
     def imagenetpolicy(self, fillcolor: (float, float, float):
         self.__add_operation(ImageNetPolicy(fillcolor))
                        
-    def randaugment(self, trans_list: []):
+    def randaugment(self, trans_list: list):
         self.__add_operation(RandAugment(trans_list))
 
     def __add_operation(self, operation: Operation):
