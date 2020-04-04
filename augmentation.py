@@ -69,7 +69,7 @@ if __name__ == '__main__':
         generator.imagenetpolicy(fillcolor=DEFAULT_IMAGENETPOLYCY_FILLCOLOR)
         
    
-    if 'randaugment' in DEFAULT_OPERATIONS:
-        generator.randaugment(trans_list = DEFAULT_RANDAUGMENT_TRANS_LIST)
+    #if 'randaugment' in DEFAULT_OPERATIONS:
+    #    generator.randaugment(trans_list = DEFAULT_RANDAUGMENT_TRANS_LIST)
 
     generator.execute()
