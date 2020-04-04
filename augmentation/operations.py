@@ -18,6 +18,21 @@ class Operation:
     def __init__(self, probability: float) -> None:
         super().__init__()
         self.probability = probability
+        
+    @abstractmethod
+    def __init__(self, size: float) -> None:
+        super().__init__()
+        self.size = size
+        
+    @abstractmethod
+    def __init__(self, fillcolor: float) -> None:
+        super().__init__()
+        self.fillcolor = fillcolor
+        
+    @abstractmethod
+    def __init__(self, trans_list: list) -> None:
+        super().__init__()
+        self.trans_list = trans_list
 
     @abstractmethod
     def execute(self, image_array: ndarray):
