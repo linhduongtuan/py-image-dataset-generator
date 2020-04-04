@@ -28,11 +28,7 @@ class Operation:
     def __init__(self, fillcolor: float) -> None:
         super().__init__()
         self.fillcolor = fillcolor
-        
-    @abstractmethod
-    def __init__(self, trans_list: list) -> None:
-        super().__init__()
-        self.trans_list = trans_list
+
 
     @abstractmethod
     def execute(self, image_array: ndarray):
@@ -63,9 +59,7 @@ class OperationPipeline:
         
     def imagenetpolicy(self, fillcolor: float):
         self.__add_operation(ImageNetPolicy(fillcolor))
-                       
-    def randaugment(self, trans_list: list):
-        self.__add_operation(RandAugment(trans_list))
+
 
     def __add_operation(self, operation: Operation):
         self.operations.append(operation)
