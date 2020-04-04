@@ -33,6 +33,4 @@ DEFAULT_CUTOUT_SIZE = 16
 DEFAULT_IMAGENETPOLICY_FILLCOLOR = (128, 128, 128)
 
 # RandAugmnet
-DEFAULT_RANDAUGMENT_TRANS_LIST = [ 'Invert', 'Cutout', 'Sharpness', 'AutoContrast', 'Posterize',
-                                   'ShearX', 'TranslateX', 'TranslateY', 'ShearY', 'Rotate',
-                                   'Equalize', 'Contrast', 'Color', 'Solarize', 'Brightness']
+#DEFAULT_RANDAUGMENT_TRANS_LIST = [ 'Invert', 'Cutout', 'Sharpness', 'AutoContrast', 'Posterize','ShearX', 'TranslateX', 'TranslateY', 'ShearY', 'Rotate','Equalize', 'Contrast', 'Color', 'Solarize', 'Brightness']
